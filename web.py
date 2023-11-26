@@ -11,7 +11,8 @@ def add_todo():
 
 
 st.title("My Todo APP")
-st.write("Your TO-DO list:")
+# unsafe_allow_html allows you to use html tags, it is only available for write method
+st.write("<b>Your TO-DO list:</b>", unsafe_allow_html=True)
 
 for index, todo in enumerate(todo_list):
     checkbox = st.checkbox(todo, key=f"{todo}")
